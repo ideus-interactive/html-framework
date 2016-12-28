@@ -1,7 +1,0 @@
-{
-  "strict": false,
-  "globals": {
-    "jQuery": false
-  },
-  "esversion": 6
-}
