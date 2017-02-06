@@ -6,14 +6,14 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fedorovsky/ideus-boilerplate.git"
+    "url": "https://github.com/ideus-team/html-framework.git"
   },
-  "author": "Anton Fedorovskyi",
+  "author": "iDeus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fedorovsky/ideus-boilerplate/issues"
+    "url": "https://github.com/ideus-team/html-framework/issues"
   },
-  "homepage": "https://github.com/fedorovsky/ideus-boilerplate#readme",
+  "homepage": "https://github.com/ideus-team/html-framework.git",
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
