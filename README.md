@@ -1,5 +1,5 @@
 #How to install and run HTML Framework
-Our HTML Framework based on H5BP+Grunt+SASS.
+Our HTML Framework based on H5BP+Gulp+SASS.
 
 Instalation procedure is similar for Win/Mac/Linux.
 
@@ -17,10 +17,10 @@ If you get SSL error — follow [this steps](https://gist.github.com/luislavena/
 ##3. Install [Node.js](https://nodejs.org/en/download/current/)
 Current (latest features), Windows Installer 64-bit (needed for Grunt).
 
-##4. Install Grunt
+##4. Install Gulp
 Run cmd as administrator and execute:
 ```
-npm install grunt-cli -g
+npm install gulp-cli -g
 ```
 
 ##5. Get Framework
