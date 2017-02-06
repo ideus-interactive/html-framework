@@ -1,6 +1,5 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-error_log
-Thumbs.db
-assets/css/*
-assets/img/*
+.sass-cache
+.idea
+
+node_modules
+npm-debug.log

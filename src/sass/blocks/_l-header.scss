@@ -1,0 +1,13 @@
+header {
+
+}
+
+.boy{
+  display: inline-block;
+  @include sprite($boy)
+}
+
+.girl{
+  display: inline-block;
+  @include sprite($girl)
+}

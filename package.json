@@ -1,0 +1,49 @@
+{
+  "name": "ideus-boilerplate",
+  "version": "0.0.1",
+  "description": "gulp boilerplate",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedorovsky/ideus-boilerplate.git"
+  },
+  "author": "Anton Fedorovskyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fedorovsky/ideus-boilerplate/issues"
+  },
+  "homepage": "https://github.com/fedorovsky/ideus-boilerplate#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.6",
+    "browserify": "^13.3.0",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-csslint": "^1.0.0",
+    "gulp-debug": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-sizereport": "^1.2.0",
+    "gulp-sourcemaps": "^1.9.3",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp.spritesmith": "^6.3.0",
+    "merge-stream": "^1.0.1",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
