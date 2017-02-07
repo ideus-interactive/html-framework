@@ -33,4 +33,36 @@ module.exports = function (gulp, $, CONFIG) {
 
     return $.merge(imgStream, cssStream);
   });
+  /**
+   * SVG SPRITE DEV
+   */
+  gulp.task('sprite_svg:dev', function () {
+    return gulp.src(CONFIG.PATH.SRC.SPRITE_SVG)
+      .pipe($.svgSprites({
+        cssFile: '../../dev/src/sass/_sprite_svg.scss',
+        svgPath: '../img/svg/sprite.svg',
+        common: 'svg-sprite',
+        selector: 'svg-%f',
+        preview: {
+          sprite: null
+        }
+      }))
+      .pipe(gulp.dest(CONFIG.PATH.DIST.IMG));
+  });
+  /**
+   * SVG SPRITE PROD
+   */
+  gulp.task('sprite_svg:prod', function () {
+    return gulp.src(CONFIG.PATH.SRC.SPRITE_SVG)
+      .pipe($.svgSprites({
+        cssFile: '../../dev/src/sass/_sprite_svg.scss',
+        svgPath: '../img/svg/sprite.svg',
+        common: 'svg-sprite',
+        selector: 'svg-%f',
+        preview: {
+          sprite: null
+        }
+      }))
+      .pipe(gulp.dest(CONFIG.PATH.DIST.IMG));
+  });
 };

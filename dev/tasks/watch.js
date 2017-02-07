@@ -21,6 +21,10 @@ module.exports = function(gulp, $, CONFIG) {
     /**
      * SPRITE
      */
-    gulp.watch('./src/img/sprite/**/*.*', gulp.series('sprite:dev'));
+    gulp.watch(CONFIG.PATH.SRC.SPRITE, gulp.series('sprite:dev'));
+    /**
+     * SPRITE SVG
+     */
+    gulp.watch(CONFIG.PATH.SRC.SPRITE_SVG, gulp.series('sprite_svg:dev'));
   });
 };

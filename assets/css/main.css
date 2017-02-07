@@ -548,6 +548,47 @@ th {
 * @section Settings
 */
 
+/* line 1, src/sass/_sprite_svg.scss */
+
+.svg-sprite {
+  font-size: 10px;
+}
+
+/* line 5, src/sass/_sprite_svg.scss */
+
+.svg-sprite:before {
+  display: inline-block;
+
+  content: " ";
+  vertical-align: middle;
+
+  background: url("../img/svg/sprite.svg") no-repeat 0 0/20.6676em 40.6em;
+}
+
+/* line 14, src/sass/_sprite_svg.scss */
+
+.no-svg .svg-sprite:before {
+  background: url("../svg/sprite.png");
+}
+
+/* line 20, src/sass/_sprite_svg.scss */
+
+.svg-sprite.svg-boy:before {
+  width: 19.849600000000002em;
+  height: 19.849600000000002em;
+
+  background-position: 0 0;
+}
+
+/* line 29, src/sass/_sprite_svg.scss */
+
+.svg-sprite.svg-girl:before {
+  width: 20.6676em;
+  height: 20.6676em;
+
+  background-position: 0 -19.9em;
+}
+
 /*=================================
 =            VARIABLES            =
 =================================*/
@@ -1062,7 +1103,7 @@ a:hover {
 
 /* TEST SPRITE */
 
-/* line 37, src/sass/main.scss */
+/* line 38, src/sass/main.scss */
 
 .boy {
   display: inline-block;
@@ -1073,7 +1114,7 @@ a:hover {
   background: url(../img/sprite.png) 0 0;
 }
 
-/* line 41, src/sass/main.scss */
+/* line 42, src/sass/main.scss */
 
 .girl {
   display: inline-block;

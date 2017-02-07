@@ -34,6 +34,7 @@
     "gulp-sizereport": "^1.2.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-streamify": "^1.0.2",
+    "gulp-svg-sprites": "^4.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp.spritesmith": "^6.3.0",
     "merge-stream": "^1.0.1",

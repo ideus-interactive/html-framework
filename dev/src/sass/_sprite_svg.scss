@@ -1,0 +1,38 @@
+.svg-sprite {
+    font-size: 10px;
+}
+
+.svg-sprite:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 20.6676em 40.6em;
+}
+
+.no-svg .svg-sprite:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .svg-sprite.svg-boy:before {
+      background-position: 0em 0em;
+      width: 19.849600000000002em;
+      height: 19.849600000000002em;
+  }
+
+
+
+
+  .svg-sprite.svg-girl:before {
+      background-position: 0em -19.9em;
+      width: 20.6676em;
+      height: 20.6676em;
+  }
+
+
+
+
+

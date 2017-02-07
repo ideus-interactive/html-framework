@@ -25,7 +25,8 @@ const CONFIG = {
       ROOT: SRC,
       FONTS: `${SRC}/fonts/**/*.*`,
       IMG: [`${SRC}/img/**/*.*`, `!${SRC}/img/sprite/*`],
-      SPRITE: `${SRC}/img/sprite/**/*.*`,
+      SPRITE: `${SRC}/img/sprite/**/*.+(png|jpg)`,
+      SPRITE_SVG: `${SRC}/img/sprite/**/*.svg`,
       JS: {
         BUNDLE: `${SRC}/js/bundle.js`
       },
@@ -59,7 +60,7 @@ const CONFIG = {
 /**
  * Developer tasks
  */
-gulp.task('dev', gulp.series('clean', gulp.parallel('sprite:dev', 'styles:dev', 'js:dev', 'fonts:dev', 'img:dev'), 'sizereport'));
+gulp.task('dev', gulp.series('clean', gulp.parallel('sprite:dev', 'sprite_svg:dev', 'styles:dev', 'js:dev', 'fonts:dev', 'img:dev'), 'sizereport'));
 gulp.task('dev:watch', gulp.series('dev', 'watch'));
 gulp.task('dev:serve', gulp.series('dev', gulp.parallel('watch', 'serve')));
 
