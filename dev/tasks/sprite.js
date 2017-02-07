@@ -47,6 +47,9 @@ module.exports = function (gulp, $, CONFIG) {
           sprite: null
         }
       }))
+      .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))
+      .pipe($.filter("../**/*.svg"))
+      .pipe($.svg2png())
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG));
   });
   /**
@@ -63,6 +66,9 @@ module.exports = function (gulp, $, CONFIG) {
           sprite: null
         }
       }))
+      .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))
+      .pipe($.filter("../**/*.svg"))
+      .pipe($.svg2png())
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG));
   });
 };
