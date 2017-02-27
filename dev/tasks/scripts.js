@@ -9,7 +9,10 @@ module.exports = function (gulp, $, CONFIG) {
     const bundler = $.watchify($.browserify(CONFIG.PATH.SRC.JS.BUNDLE, {
       debug: true
     }))
-      .transform($.babelify, {presets: ["es2015"]});
+      .transform($.babelify, {
+        "presets": ["es2015"],
+        "plugins": ["transform-object-rest-spread"]
+      });
 
     bundler.on('update', rebundle);
 
