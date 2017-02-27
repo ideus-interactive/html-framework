@@ -34,7 +34,10 @@ module.exports = function (gulp, $, CONFIG) {
    */
   gulp.task('js:prod', function () {
     return $.browserify(CONFIG.PATH.SRC.JS.BUNDLE, {})
-      .transform($.babelify, {presets: ["es2015"]})
+      .transform($.babelify, {
+        "presets": ["es2015"],
+        "plugins": ["transform-object-rest-spread"]
+      })
       .bundle().on('error', showError)
       .pipe($.source('bundle.js'))
       .pipe($.streamify($.uglify(/*{ mangle: false }*/)))
