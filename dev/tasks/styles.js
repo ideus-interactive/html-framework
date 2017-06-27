@@ -9,8 +9,12 @@ module.exports = function(gulp, $, CONFIG) {
     return gulp.src(CONFIG.PATH.SRC.STYLES.SASS)
       .pipe($.if(CONFIG.GULP_DEBUG, $.debug()))
       .pipe($.sourcemaps.init())
-      .pipe($.sass({ sourceComments: true, outputStyle: 'expanded' }).on('error', showError))
+      .pipe($.sass({ sourceComments: true }).on('error', showError))
       .pipe($.autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+      .pipe($.shorthand())
+      .pipe($.csscomb())
+      .pipe($.csslint('src/sass/config/.csslintrc.json'))
+      .pipe($.csslint.formatter())
       .pipe($.sourcemaps.write('./'))
       .pipe($.if(COUNT_BUILD++, $.sizereport({gzip: true})))
       .pipe(gulp.dest(CONFIG.PATH.DIST.STYLES.CSS));
