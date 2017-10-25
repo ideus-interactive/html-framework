@@ -46,7 +46,7 @@ module.exports = function (gulp, $, CONFIG) {
           sprite: null
         },
         svg: {
-          sprite: 'sprite-svg.svg'
+          sprite: 'sprite.svg'
         }
       }))
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))
@@ -68,7 +68,7 @@ module.exports = function (gulp, $, CONFIG) {
           sprite: null
         },
         svg: {
-          sprite: 'sprite-svg.svg'
+          sprite: 'sprite.svg'
         }
       }))
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))
