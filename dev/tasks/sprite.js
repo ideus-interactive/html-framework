@@ -7,7 +7,7 @@ module.exports = function (gulp, $, CONFIG) {
   gulp.task('sprite:dev', function () {
     const spriteData = gulp.src(CONFIG.PATH.SRC.SPRITE).pipe($.spritesmith({
       imgName  : 'sprite.png',
-      imgPath  : '../img/sprite.png',
+      imgPath  : 'sprite.png',
       cssName  : '_sprite.scss',
       cssFormat: 'scss'
     }));
@@ -23,7 +23,7 @@ module.exports = function (gulp, $, CONFIG) {
   gulp.task('sprite:prod', function () {
     const spriteData = gulp.src(CONFIG.PATH.SRC.SPRITE).pipe($.spritesmith({
       imgName  : 'sprite.png',
-      imgPath  : '../img/sprite.png',
+      imgPath  : 'sprite.png',
       cssName  : '_sprite.scss',
       cssFormat: 'scss'
     }));
@@ -40,11 +40,13 @@ module.exports = function (gulp, $, CONFIG) {
     return gulp.src(CONFIG.PATH.SRC.SPRITE_SVG)
       .pipe($.svgSprites({
         cssFile: '../../dev/src/sass/_sprite_svg.scss',
-        svgPath: '../img/svg/sprite.svg',
         common: 'svg-sprite',
         selector: 'svg-%f',
         preview: {
           sprite: null
+        },
+        svg: {
+          sprite: 'sprite-svg.svg'
         }
       }))
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))
@@ -59,11 +61,14 @@ module.exports = function (gulp, $, CONFIG) {
     return gulp.src(CONFIG.PATH.SRC.SPRITE_SVG)
       .pipe($.svgSprites({
         cssFile: '../../dev/src/sass/_sprite_svg.scss',
-        svgPath: '../img/svg/sprite.svg',
+        svgPath: 'sprite.svg',
         common: 'svg-sprite',
         selector: 'svg-%f',
         preview: {
           sprite: null
+        },
+        svg: {
+          sprite: 'sprite-svg.svg'
         }
       }))
       .pipe(gulp.dest(CONFIG.PATH.DIST.IMG))

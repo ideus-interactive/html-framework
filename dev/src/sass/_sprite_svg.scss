@@ -6,13 +6,13 @@
     content:' ';
     vertical-align:middle;
     display: inline-block;
-    background-image: url("../img/svg/sprite.svg");
+    background-image: url("sprite.svg");
     background-repeat: no-repeat;
     background-size: 20.6676em 40.6em;
 }
 
 .no-svg .svg-sprite:before {
-    background-image: url("../svg/sprite.png");
+    background-image: url("sprite.png");
 }
 
 

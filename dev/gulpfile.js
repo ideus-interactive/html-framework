@@ -37,13 +37,13 @@ const CONFIG = {
     },
     DIST: {
       ROOT: DIST,
-      FONTS: `${DIST}/fonts/`,
-      IMG: `${DIST}/img/`,
+      FONTS: `${DIST}/`,
+      IMG: `${DIST}/`,
       JS: {
-        BUNDLE: `${DIST}/js/`
+        BUNDLE: `${DIST}/`
       },
       STYLES: {
-        CSS: `${DIST}/css/`
+        CSS: `${DIST}/`
       }
     }
   }
