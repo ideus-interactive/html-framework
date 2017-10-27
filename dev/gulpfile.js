@@ -13,6 +13,7 @@ $.browserSync = require("browser-sync").create();
 $.path        = require('path');
 $.merge       = require('merge-stream');
 $.del         = require('del');
+$.rename      = require("gulp-rename");
 
 const SRC  = './src';
 const DIST = '../assets';
