@@ -1,3 +1,2 @@
-@echo off
-call grunt dev
-call grunt concurrent:dev
+@echo Run dev task
+call npm run dev
