@@ -21,7 +21,7 @@ module.exports = {
   },
   node: false,
   module: {
-        rules: [
+     rules: [
          {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -30,20 +30,45 @@ module.exports = {
         },
           {
             test: /\.scss$/,
-            use: [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader?url=false', 'sass-loader']
+            use:[
+              {
+                loader: "style-loader"
+              },
+              MiniCssExtractPlugin.loader,
+              {
+                loader: "css-loader", options: {
+                  sourceMap: true,
+                  url: false
+                }
+              }, {
+                loader: "sass-loader", options: {
+                  sourceMap: true
+                }
+              }
+            ]
         },
           {
             test: /\.css$/,
-            use: [ 'style-loader', 'css-loader?url=false']
+            use:[
+              {
+                loader: "style-loader"
+              },
+              {
+                loader: "css-loader", options: {
+                  sourceMap: true,
+                  url: false
+                }
+              }
+            ]
           },
         {test: /\.png$/, use: [
                 'file-loader?name=[path][name].[ext]'
             ]}
         ]
-    },
+  },
   resolve: {
-        modules: ["node_modules", "src"]
-    },
+    modules: ["node_modules", "src"]
+  },
   plugins: [
 
   new CleanWebpackPlugin([targetFolder], {
@@ -59,23 +84,23 @@ module.exports = {
       to: '../assets/',
       ignore: ["js/**/*", "sass/**/*"]
     },
-      {
-        from: 'src/fonts/',
-        to: '../assets/fonts/'
-      }]),
+    {
+      from: 'src/fonts/',
+      to: '../assets/fonts/'
+    }]),
 
     new SpritesmithPlugin({
       src :{
        cwd: path.resolve(__dirname, 'src/img/sprites'),
-                glob: '*.png'
+       glob: '*.png'
     },
-                 target: {
-                image: path.resolve(__dirname, 'src/img/blocks/spritessheet.png'),
-                css: path.resolve(__dirname, 'src/sass/_sprite.scss')
-            },
-            apiOptions: {
-               cssImageRef: '../img/blocks/spritessheet.png'
-            }
+      target: {
+        image: path.resolve(__dirname, 'src/img/blocks/spritessheet.png'),
+        css: path.resolve(__dirname, 'src/sass/_sprite.scss')
+      },
+      apiOptions: {
+        cssImageRef: '../img/blocks/spritessheet.png'
+      }
     }),
     new MiniCssExtractPlugin({
       filename: 'css/main.min.css',
