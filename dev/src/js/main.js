@@ -39,7 +39,9 @@ function initMascarad()
       min: $(this).attr('min') ? $(this).attr('min') : undefined,
       max: $(this).attr('max') ? $(this).attr('max') : undefined,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
@@ -50,7 +52,9 @@ function initMascarad()
       min: 0,
       max: $(this).attr('max') ? $(this).attr('max') : undefined,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
@@ -61,7 +65,9 @@ function initMascarad()
       min: $(this).attr('min') ? $(this).attr('min') : undefined,
       max: 0,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
@@ -72,7 +78,11 @@ function initMascarad()
       min: $(this).attr('min') ? $(this).attr('min') : undefined,
       max: $(this).attr('max') ? $(this).attr('max') : undefined,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup:  $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
@@ -84,7 +94,9 @@ function initMascarad()
       min: 0,
       max: $(this).attr('max') ? $(this).attr('max') : undefined,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
   $('.js-format-float-negative').each(function () {
@@ -95,7 +107,9 @@ function initMascarad()
       min: $(this).attr('min') ? $(this).attr('min') : undefined,
       max: 0,
       prefix: $(this).attr('data-format-prefix') ? $(this).attr('data-format-prefix') : undefined,
-      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined
+      suffix: $(this).attr('data-format-suffix') ? $(this).attr('data-format-suffix') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
@@ -128,7 +142,9 @@ function initMascarad()
   $('.js-format-monetary').each(function () {
     $(this).inputmask('currency', {
       autoUnmask: true,
-      prefix: $(this).attr('data-format-currency') ? $(this).attr('data-format-currency') : undefined
+      prefix: $(this).attr('data-format-currency') ? $(this).attr('data-format-currency') : undefined,
+      groupSeparator: $(this).attr('data-format-sep') ? $(this).attr('data-format-sep') : undefined,
+      autoGroup: $(this).attr('data-format-sep') && $(this).attr('data-format-sep').length > 0
     });
   });
 
